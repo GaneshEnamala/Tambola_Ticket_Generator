@@ -2,6 +2,7 @@ package tambola.ticket.generator.model;
 
 import java.util.Arrays;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,6 +15,7 @@ public class Ticket {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 	
+	@ElementCollection
 	public int numbers[][];
 
 	public Ticket() {
